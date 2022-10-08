@@ -1,0 +1,16 @@
+body.dark {
+
+    img.mobile-dark {
+        display: block;
+    }
+    img.mobile-light {
+        display: none;
+    }
+
+    main {
+        div.header {
+            @extend body.dark;
+        }
+    }
+
+}
