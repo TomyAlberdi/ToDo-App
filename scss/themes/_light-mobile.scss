@@ -1,7 +1,27 @@
+$font-light: hsl(236, 9%, 61%);
+$font-dark: hsl(235, 19%, 35%);
+
 body.light {
+
+    background-color: hsl(236, 33%, 92%);
 
     img.mobile-dark {
         display: none;
+    }
+
+    main {
+        form input {
+            color: $font-light;
+        }
+        div.task-list {
+            div.task {
+                background-color: white;
+                color: $font-dark;
+                .check {
+                    border: 1px solid $font-light;
+                }
+            }
+        }
     }
 
 }

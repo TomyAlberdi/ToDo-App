@@ -1,4 +1,10 @@
+$bkg: hsl(235, 24%, 19%);
+$font-light: hsl(234, 39%, 85%);
+$font-dark: hsl(234, 11%, 52%);
+$gray: hsl(236, 9%, 61%);
+
 body.dark {
+    background-color: hsl(235, 21%, 11%);
 
     img.mobile-dark {
         display: block;
@@ -8,8 +14,18 @@ body.dark {
     }
 
     main {
-        div.header {
-            @extend body.dark;
+        form input {
+            background-color: $bkg;
+            color: $font-light;
+        }
+        div.task-list {
+            div.task {
+                background-color: $bkg;
+                color: $font-light;
+                .check {
+                    border: 1px solid $font-dark;
+                }
+            }
         }
     }
 

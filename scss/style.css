@@ -1,6 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+body.light {
+  background-color: hsl(236deg, 33%, 92%);
+}
 body.light img.mobile-dark {
   display: none;
+}
+body.light main form input {
+  color: hsl(236deg, 9%, 61%);
+}
+body.light main div.task-list div.task {
+  background-color: white;
+  color: hsl(235deg, 19%, 35%);
+}
+body.light main div.task-list div.task .check {
+  border: 1px solid hsl(236deg, 9%, 61%);
+}
+
+body.dark {
+  background-color: hsl(235deg, 21%, 11%);
+}
+body.dark img.mobile-dark {
+  display: block;
+}
+body.dark img.mobile-light {
+  display: none;
+}
+body.dark main form input {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 39%, 85%);
+}
+body.dark main div.task-list div.task {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 39%, 85%);
+}
+body.dark main div.task-list div.task .check {
+  border: 1px solid hsl(234deg, 11%, 52%);
 }
 
 * {
@@ -19,10 +53,69 @@ body.light img.mobile-dark {
 }
 * body main {
   padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3vh;
 }
 * body main div.header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 5vh;
-  border: 1px solid red;
+}
+* body main div.header h1 {
+  letter-spacing: 2vw;
+  color: white;
+}
+* body main div.header img {
+  cursor: pointer;
+}
+* body main form input {
+  width: 90vw;
+  height: 8vh;
+  padding: 2vh;
+  border-radius: 7px;
+  border: none;
+}
+* body main form input:focus {
+  outline: none;
+}
+* body main div.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+* body main div.task-list div.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 4vw;
+  font-size: 0.8rem;
+  width: 90vw;
+  min-height: 8vh;
+}
+* body main div.task-list div.task:nth-child(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+* body main div.task-list div.task:nth-last-child(1) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+* body main div.task-list div.task .check {
+  border-radius: 50%;
+  width: 3vh;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* body main div.task-list div.task .check img {
+  width: 2vh;
+  height: 2vh;
+}
+* body main div.task-list div.task .cross {
+  width: 2vh;
+  height: 2vh;
 }/*# sourceMappingURL=style.css.map */
