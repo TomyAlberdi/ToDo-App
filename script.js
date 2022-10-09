@@ -47,6 +47,8 @@ const crearTask = (val) => {
     div.appendChild(subt)
     div.appendChild(img)
 
+    /* New task active states */
+
     div.addEventListener('mouseover', () => {
         div.lastElementChild.style.display = "block"
     })
@@ -59,6 +61,9 @@ const crearTask = (val) => {
     checkDiv.addEventListener('mouseleave', () => {
         checkDiv.lastElementChild.style.display = "none"
     })
+
+    form.reset()
+
     taskList.insertBefore(div,cont)
 }
 
