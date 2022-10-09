@@ -150,6 +150,7 @@ body.dark main div.states {
 * body main div.task-list div.task .check img, * body main div.task-list div.cont .check img {
   width: 2vh;
   height: 2vh;
+  display: none;
 }
 * body main div.task-list div.task .cross, * body main div.task-list div.cont .cross {
   width: 2vh;

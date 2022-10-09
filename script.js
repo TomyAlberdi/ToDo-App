@@ -24,14 +24,41 @@ const cont = document.querySelector('.cont')
 const crearTask = (val) => {
     let div = document.createElement('div')
     div.classList.add('task')
-    let temp = `
-        <div class="subt">
-            <div class="check"></div>
-            <p>${val}</p>
-        </div> 
-        <img src="./images/icon-cross.svg" alt="" class="cross">
-    `
-    div.innerHTML = temp
+
+    let subt = document.createElement('div')
+    subt.classList.add('subt')
+
+    let checkDiv = document.createElement('div')
+    checkDiv.classList.add('check')
+
+    let checkImg = document.createElement('img')
+    checkImg.setAttribute('src','./images/icon-check.svg')
+
+    let p = document.createElement('p')
+    p.innerHTML = val
+
+    let img = document.createElement('img')
+    img.setAttribute('src','./images/icon-cross.svg')
+    img.classList.add('cross')
+    
+    checkDiv.appendChild(checkImg)
+    subt.appendChild(checkDiv)
+    subt.appendChild(p)
+    div.appendChild(subt)
+    div.appendChild(img)
+
+    div.addEventListener('mouseover', () => {
+        div.lastElementChild.style.display = "block"
+    })
+    div.addEventListener('mouseleave', () => {
+        div.lastElementChild.style.display = "none"
+    })
+    checkDiv.addEventListener('mouseover', () => {
+        checkDiv.lastElementChild.style.display = "block"
+    })
+    checkDiv.addEventListener('mouseleave', () => {
+        checkDiv.lastElementChild.style.display = "none"
+    })
     taskList.insertBefore(div,cont)
 }
 
@@ -40,10 +67,10 @@ const crearTask = (val) => {
 const check = document.querySelectorAll('.check')
 check.forEach(c => {
     c.addEventListener('mouseover', () => {
-        c.innerHTML = `<img src="./images/icon-check.svg" alt="">`
+        c.lastElementChild.style.display = "block"
     })
     c.addEventListener('mouseleave', () => {
-        c.innerHTML = ``
+        c.lastElementChild.style.display = "none"
     })
 })
 
