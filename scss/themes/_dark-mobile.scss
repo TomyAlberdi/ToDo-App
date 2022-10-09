@@ -28,6 +28,9 @@ body.dark {
                 .check {
                     border: 1px solid $font-dark;
                 }
+                &.complete {
+                    color: $font-dark;
+                }
             }
             div.cont {
                 color: $font-dark;

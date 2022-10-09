@@ -48,13 +48,6 @@ const crearTask = (val) => {
     div.appendChild(img)
 
     /* New task active states */
-
-    div.addEventListener('mouseover', () => {
-        div.lastElementChild.style.display = "block"
-    })
-    div.addEventListener('mouseleave', () => {
-        div.lastElementChild.style.display = "none"
-    })
     checkDiv.addEventListener('mouseover', () => {
         checkDiv.lastElementChild.style.display = "block"
     })
@@ -76,15 +69,5 @@ check.forEach(c => {
     })
     c.addEventListener('mouseleave', () => {
         c.lastElementChild.style.display = "none"
-    })
-})
-
-const tasks = document.querySelectorAll('.task')
-tasks.forEach(t => {
-    t.addEventListener('mouseover', () => {
-        t.lastElementChild.style.display = "block"
-    })
-    t.addEventListener('mouseleave', () => {
-        t.lastElementChild.style.display = "none"
     })
 })

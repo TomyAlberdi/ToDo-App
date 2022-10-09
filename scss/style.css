@@ -24,6 +24,9 @@ body.light main div.task-list div.task, * body.light main div.task-list div.cont
 body.light main div.task-list div.task .check, * body.light main div.task-list div.cont .check {
   border: 1px solid hsl(236deg, 9%, 61%);
 }
+body.light main div.task-list div.task.complete, * body.light main div.task-list div.complete.cont {
+  color: hsl(236deg, 9%, 61%);
+}
 body.light main div.task-list div.cont {
   color: hsl(236deg, 9%, 61%);
 }
@@ -60,6 +63,9 @@ body.dark main div.task-list div.task, * body.dark main div.task-list div.cont {
 }
 body.dark main div.task-list div.task .check, * body.dark main div.task-list div.cont .check {
   border: 1px solid hsl(234deg, 11%, 52%);
+}
+body.dark main div.task-list div.task.complete, * body.dark main div.task-list div.complete.cont {
+  color: hsl(234deg, 11%, 52%);
 }
 body.dark main div.task-list div.cont {
   color: hsl(234deg, 11%, 52%);
@@ -157,11 +163,21 @@ body.dark main div.states {
   height: 2vh;
   cursor: pointer;
 }
+* body main div.task-list div.task.complete, * body main div.task-list div.complete.cont {
+  text-decoration: line-through;
+}
+* body main div.task-list div.task.complete .check, * body main div.task-list div.complete.cont .check {
+  background-image: linear-gradient(90deg, rgb(87, 221, 255) 35%, rgb(192, 88, 243) 100%);
+  border: none;
+}
+* body main div.task-list div.task.complete .check img, * body main div.task-list div.complete.cont .check img {
+  display: block !important;
+}
 * body main div.task-list div.cont {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-* body main div.task-list div.cont .complete {
+* body main div.task-list div.cont .clearComplete {
   cursor: pointer;
 }
 * body main div.task-list div.cont-states {

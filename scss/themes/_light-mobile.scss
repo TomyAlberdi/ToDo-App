@@ -23,6 +23,9 @@ body.light {
                 .check {
                     border: 1px solid $font-light;
                 }
+                &.complete {
+                    color: $font-light;
+                }
             }
             div.cont {
                 color: $font-light;

@@ -16,7 +16,7 @@ body.dark {
                 color: $font-dark;
             }
         }
-        .all:hover, .active:hover, .completed:hover, .complete:hover {
+        .allBtn:hover, .activeBtn:hover, .completedBtn:hover, .clearComplete:hover {
             color: $font-light;
             cursor: pointer;
         }
