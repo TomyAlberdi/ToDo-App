@@ -1,0 +1,77 @@
+body.dark img.bkg.desktop-dark {
+  display: block;
+  width: 100%;
+}
+body.dark main div.task-list div.cont-states {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
+}
+
+body.light img.bkg.desktop-light {
+  display: block;
+  width: 100%;
+}
+body.light main div.task-list div.cont-states {
+  background-color: white;
+  color: hsl(236deg, 9%, 61%);
+}
+
+@media screen and (min-width: 1440px) {
+  * {
+    font-size: 1rem;
+  }
+  * body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 11.8vh;
+  }
+  * body img.bkg.mobile-light, * body img.bkg.mobile-dark {
+    display: none;
+  }
+  * body main {
+    width: 50vw;
+  }
+  * body main div.header h1 {
+    letter-spacing: 1vw;
+    font-size: 2rem;
+  }
+  * body main div.header img {
+    width: 2vw;
+  }
+  * body main form input {
+    width: 40vw;
+  }
+  * body main div.task-list div.task {
+    width: 40vw;
+    padding: 1vh 1.5vw;
+    gap: 1.5vw;
+    justify-content: flex-start;
+  }
+  * body main div.task-list div.task img.cross {
+    display: none;
+  }
+  * body main div.task-list div.cont {
+    display: none;
+  }
+  * body main div.task-list div.cont-states {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 2vw;
+  }
+  * body main div.task-list div.cont-states div {
+    display: flex;
+    gap: 2vw;
+  }
+  * body main div.task-list div.cont-states .selected {
+    color: hsl(220deg, 98%, 61%);
+  }
+  * body main div.states {
+    display: none;
+  }
+}/*# sourceMappingURL=query.css.map */

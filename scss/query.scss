@@ -1,0 +1,72 @@
+@use "./themes/dark-desktop";
+@use "./themes/light-desktop";
+
+$blue: hsl(220, 98%, 61%);
+
+@media screen and (min-width: 1440px) {
+
+    * {
+        font-size: 1rem;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 11.8vh;
+            img.bkg {
+                &.mobile-light, &.mobile-dark {
+                    display: none;
+                }
+            }
+            main {
+                div.header {
+                    h1 {
+                        letter-spacing: 1vw;
+                        font-size: 2rem;
+                    }
+                    img {
+                        width: 2vw;
+                    }
+                }
+                width: 50vw;
+                form input {
+                    width: 40vw;
+                }
+                div.task-list {
+                    div.task {
+                        width: 40vw;
+                        padding: 1vh 1.5vw;
+                        gap: 1.5vw;
+                        justify-content: flex-start;
+                        img.cross {
+                            display: none;
+                        }
+                    }
+                    div.cont {
+                        display: none;
+                    }
+                    div.cont-states {
+                        display: block;
+                        display: flex;
+                        justify-content: space-between;
+                        height: 7vh;
+                        align-items: center;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        padding: 0 2vw;
+                        div {
+                            display: flex;
+                            gap: 2vw;
+                        }
+                        .selected {
+                            color: $blue;
+                        }
+                    }
+                }
+                div.states {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

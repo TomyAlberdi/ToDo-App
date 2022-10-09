@@ -16,6 +16,9 @@ $blue: hsl(220, 98%, 61%);
             position: absolute;
             top: 0;
             z-index: -1;
+            &.desktop-light, &.desktop-dark {
+                display: none;
+            }
         }
         main {
             padding: 5vh 5vw;
@@ -60,10 +63,6 @@ $blue: hsl(220, 98%, 61%);
                         border-top-left-radius: 5px;
                         border-top-right-radius: 5px;
                     }
-                    &:nth-last-child(1) {
-                        border-bottom-left-radius: 5px;
-                        border-bottom-right-radius: 5px;
-                    }
                     width: 90vw;
                     min-height: 8vh;
                     .check {
@@ -88,6 +87,11 @@ $blue: hsl(220, 98%, 61%);
                     .complete {
                         cursor: pointer;
                     }
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                div.cont-states {
+                    display: none;
                 }
             }
             div.states {

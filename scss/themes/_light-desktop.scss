@@ -1,0 +1,19 @@
+$font-light: hsl(236, 9%, 61%);
+$font-dark: hsl(235, 19%, 35%);
+
+body.light {
+
+    img.bkg.desktop-light {
+        display: block;
+        width: 100%;
+    }
+    main {
+        div.task-list {
+            div.cont-states {
+                background-color: white;
+                color: $font-light;
+            }
+        }
+    }
+
+}

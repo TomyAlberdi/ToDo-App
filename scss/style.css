@@ -65,6 +65,9 @@ body.dark main div.states {
   top: 0;
   z-index: -1;
 }
+* body img.bkg.desktop-light, * body img.bkg.desktop-dark {
+  display: none;
+}
 * body main {
   padding: 5vh 5vw;
   display: flex;
@@ -113,10 +116,6 @@ body.dark main div.states {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-* body main div.task-list div.task:nth-last-child(1), * body main div.task-list div.cont:nth-last-child(1) {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
 * body main div.task-list div.task .check, * body main div.task-list div.cont .check {
   border-radius: 50%;
   width: 3vh;
@@ -133,8 +132,15 @@ body.dark main div.states {
   width: 2vh;
   height: 2vh;
 }
+* body main div.task-list div.cont {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 * body main div.task-list div.cont .complete {
   cursor: pointer;
+}
+* body main div.task-list div.cont-states {
+  display: none;
 }
 * body main div.states {
   display: flex;

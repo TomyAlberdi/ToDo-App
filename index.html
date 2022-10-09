@@ -9,12 +9,15 @@
   <title>Frontend Mentor | Todo app</title>
 
   <link rel="stylesheet" href="./scss/style.css">
+  <link rel="stylesheet" href="./scss/query.css">
 
 </head>
 <body class="light">
 
     <img src="./images/bg-mobile-light.jpg" alt="" class="bkg mobile-light">
     <img src="./images/bg-mobile-dark.jpg" alt="" class="bkg mobile-dark">
+    <img src="./images/bg-desktop-light.jpg" alt="" class="bkg desktop-light">
+    <img src="./images/bg-desktop-dark.jpg" alt="" class="bkg desktop-dark">
 
     <main>
         <div class="header">
@@ -45,11 +48,20 @@
                 <p class="task-left">5 items left</p>
                 <p class="complete">Clear Completed</p>
             </div>
+            <div class="cont-states">
+                <p class="task-left">5 items left</p>
+                <div>
+                    <h4 class="all selected">All</h4>
+                    <h4 class="active">Active</h4>
+                    <h4 class="completed">Completed</h4>
+                </div>
+                <p class="complete">Clear Completed</p>
+            </div>
         </div>
         <div class="states">
-            <h4 id="all" class="selected">All</h4>
-            <h4 id="active">Active</h4>
-            <h4 id="completed">Completed</h4>
+            <h4 class="all selected">All</h4>
+            <h4 class="active">Active</h4>
+            <h4 class="completed">Completed</h4>
         </div>
     </main>
 
