@@ -3,6 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
+$blue: hsl(220, 98%, 61%);
+
 * {
     margin: 0;
     padding: 0;
@@ -80,6 +82,26 @@
                         width: 2vh;
                         height: 2vh;
                     }
+                }
+                div.cont {
+                    @extend .task;
+                    .complete {
+                        cursor: pointer;
+                    }
+                }
+            }
+            div.states {
+                display: flex;
+                justify-content: center;
+                gap: 4vw;
+                align-items: center;
+                border-radius: 5px;
+                height: 7vh;
+                .selected {
+                    color: $blue;
+                }
+                h4 {
+                    cursor: pointer;
                 }
             }
         }

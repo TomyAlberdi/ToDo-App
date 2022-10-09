@@ -26,6 +26,13 @@ body.dark {
                     border: 1px solid $font-dark;
                 }
             }
+            div.cont {
+                color: $font-dark;
+            }
+        }
+        div.states {
+            background-color: $bkg;
+            color: $font-dark;
         }
     }
 

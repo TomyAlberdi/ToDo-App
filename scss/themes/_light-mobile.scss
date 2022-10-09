@@ -21,6 +21,13 @@ body.light {
                     border: 1px solid $font-light;
                 }
             }
+            div.cont {
+                color: $font-light;
+            }
+        }
+        div.states {
+            background-color: white;
+            color: $font-light;
         }
     }
 

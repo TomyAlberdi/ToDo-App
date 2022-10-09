@@ -8,12 +8,19 @@ body.light img.mobile-dark {
 body.light main form input {
   color: hsl(236deg, 9%, 61%);
 }
-body.light main div.task-list div.task {
+body.light main div.task-list div.task, * body.light main div.task-list div.cont {
   background-color: white;
   color: hsl(235deg, 19%, 35%);
 }
-body.light main div.task-list div.task .check {
+body.light main div.task-list div.task .check, * body.light main div.task-list div.cont .check {
   border: 1px solid hsl(236deg, 9%, 61%);
+}
+body.light main div.task-list div.cont {
+  color: hsl(236deg, 9%, 61%);
+}
+body.light main div.states {
+  background-color: white;
+  color: hsl(236deg, 9%, 61%);
 }
 
 body.dark {
@@ -29,12 +36,19 @@ body.dark main form input {
   background-color: hsl(235deg, 24%, 19%);
   color: hsl(234deg, 39%, 85%);
 }
-body.dark main div.task-list div.task {
+body.dark main div.task-list div.task, * body.dark main div.task-list div.cont {
   background-color: hsl(235deg, 24%, 19%);
   color: hsl(234deg, 39%, 85%);
 }
-body.dark main div.task-list div.task .check {
+body.dark main div.task-list div.task .check, * body.dark main div.task-list div.cont .check {
   border: 1px solid hsl(234deg, 11%, 52%);
+}
+body.dark main div.task-list div.cont {
+  color: hsl(234deg, 11%, 52%);
+}
+body.dark main div.states {
+  background-color: hsl(235deg, 24%, 19%);
+  color: hsl(234deg, 11%, 52%);
 }
 
 * {
@@ -86,7 +100,7 @@ body.dark main div.task-list div.task .check {
   flex-direction: column;
   gap: 1px;
 }
-* body main div.task-list div.task {
+* body main div.task-list div.task, * body main div.task-list div.cont {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,15 +109,15 @@ body.dark main div.task-list div.task .check {
   width: 90vw;
   min-height: 8vh;
 }
-* body main div.task-list div.task:nth-child(1) {
+* body main div.task-list div.task:nth-child(1), * body main div.task-list div.cont:nth-child(1) {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-* body main div.task-list div.task:nth-last-child(1) {
+* body main div.task-list div.task:nth-last-child(1), * body main div.task-list div.cont:nth-last-child(1) {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-* body main div.task-list div.task .check {
+* body main div.task-list div.task .check, * body main div.task-list div.cont .check {
   border-radius: 50%;
   width: 3vh;
   height: 3vh;
@@ -111,11 +125,28 @@ body.dark main div.task-list div.task .check {
   align-items: center;
   justify-content: center;
 }
-* body main div.task-list div.task .check img {
+* body main div.task-list div.task .check img, * body main div.task-list div.cont .check img {
   width: 2vh;
   height: 2vh;
 }
-* body main div.task-list div.task .cross {
+* body main div.task-list div.task .cross, * body main div.task-list div.cont .cross {
   width: 2vh;
   height: 2vh;
+}
+* body main div.task-list div.cont .complete {
+  cursor: pointer;
+}
+* body main div.states {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  align-items: center;
+  border-radius: 5px;
+  height: 7vh;
+}
+* body main div.states .selected {
+  color: hsl(220deg, 98%, 61%);
+}
+* body main div.states h4 {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
