@@ -51,6 +51,9 @@ body.light main div.task-list div.cont-states {
   * body main div.task-list div.task img.cross {
     display: none;
   }
+  * body main div.task-list div.task div.subt {
+    gap: 1.5vw;
+  }
   * body main div.task-list div.cont {
     display: none;
   }

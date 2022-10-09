@@ -112,6 +112,11 @@ body.dark main div.states {
   width: 90vw;
   min-height: 8vh;
 }
+* body main div.task-list div.task div.subt, * body main div.task-list div.cont div.subt {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
 * body main div.task-list div.task:nth-child(1), * body main div.task-list div.cont:nth-child(1) {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
