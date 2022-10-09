@@ -11,7 +11,10 @@ body.light {
 
     main {
         form input {
-            color: $font-light;
+            color: $font-dark;
+            &::placeholder {
+                color: $font-light;
+            }
         }
         div.task-list {
             div.task {

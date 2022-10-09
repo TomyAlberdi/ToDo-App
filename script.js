@@ -34,3 +34,25 @@ const crearTask = (val) => {
     div.innerHTML = temp
     taskList.insertBefore(div,cont)
 }
+
+/* Active States */
+
+const check = document.querySelectorAll('.check')
+check.forEach(c => {
+    c.addEventListener('mouseover', () => {
+        c.innerHTML = `<img src="./images/icon-check.svg" alt="">`
+    })
+    c.addEventListener('mouseleave', () => {
+        c.innerHTML = ``
+    })
+})
+
+const tasks = document.querySelectorAll('.task')
+tasks.forEach(t => {
+    t.addEventListener('mouseover', () => {
+        t.lastElementChild.style.display = "block"
+    })
+    t.addEventListener('mouseleave', () => {
+        t.lastElementChild.style.display = "none"
+    })
+})

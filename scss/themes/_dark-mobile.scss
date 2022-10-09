@@ -17,6 +17,9 @@ body.dark {
         form input {
             background-color: $bkg;
             color: $font-light;
+            &::placeholder {
+                color: $font-dark;
+            }
         }
         div.task-list {
             div.task {

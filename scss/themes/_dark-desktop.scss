@@ -16,6 +16,10 @@ body.dark {
                 color: $font-dark;
             }
         }
+        .all:hover, .active:hover, .completed:hover, .complete:hover {
+            color: $font-light;
+            cursor: pointer;
+        }
     }
 
 }

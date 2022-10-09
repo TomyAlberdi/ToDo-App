@@ -6,6 +6,10 @@ body.dark main div.task-list div.cont-states {
   background-color: hsl(235deg, 24%, 19%);
   color: hsl(234deg, 11%, 52%);
 }
+body.dark main .all:hover, body.dark main .active:hover, body.dark main .completed:hover, body.dark main .complete:hover {
+  color: hsl(234deg, 39%, 85%);
+  cursor: pointer;
+}
 
 body.light img.bkg.desktop-light {
   display: block;
@@ -14,6 +18,10 @@ body.light img.bkg.desktop-light {
 body.light main div.task-list div.cont-states {
   background-color: white;
   color: hsl(236deg, 9%, 61%);
+}
+body.light main .all:hover, body.light main .active:hover, body.light main .completed:hover, body.light main .complete:hover {
+  color: hsl(235deg, 19%, 35%);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1440px) {
@@ -46,13 +54,20 @@ body.light main div.task-list div.cont-states {
     width: 40vw;
     padding: 1vh 1.5vw;
     gap: 1.5vw;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   * body main div.task-list div.task img.cross {
     display: none;
   }
   * body main div.task-list div.task div.subt {
     gap: 1.5vw;
+  }
+  * body main div.task-list div.task div.subt p, * body main div.task-list div.task div.subt div.check:hover {
+    cursor: pointer;
+  }
+  * body main div.task-list div.task div.subt div.check:hover {
+    background-image: linear-gradient(90deg, rgb(87, 221, 255) 35%, rgb(192, 88, 243) 100%);
+    border: none;
   }
   * body main div.task-list div.cont {
     display: none;

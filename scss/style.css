@@ -6,6 +6,15 @@ body.light img.mobile-dark {
   display: none;
 }
 body.light main form input {
+  color: hsl(235deg, 19%, 35%);
+}
+body.light main form input::-moz-placeholder {
+  color: hsl(236deg, 9%, 61%);
+}
+body.light main form input:-ms-input-placeholder {
+  color: hsl(236deg, 9%, 61%);
+}
+body.light main form input::placeholder {
   color: hsl(236deg, 9%, 61%);
 }
 body.light main div.task-list div.task, * body.light main div.task-list div.cont {
@@ -35,6 +44,15 @@ body.dark img.mobile-light {
 body.dark main form input {
   background-color: hsl(235deg, 24%, 19%);
   color: hsl(234deg, 39%, 85%);
+}
+body.dark main form input::-moz-placeholder {
+  color: hsl(234deg, 11%, 52%);
+}
+body.dark main form input:-ms-input-placeholder {
+  color: hsl(234deg, 11%, 52%);
+}
+body.dark main form input::placeholder {
+  color: hsl(234deg, 11%, 52%);
 }
 body.dark main div.task-list div.task, * body.dark main div.task-list div.cont {
   background-color: hsl(235deg, 24%, 19%);
@@ -136,6 +154,7 @@ body.dark main div.states {
 * body main div.task-list div.task .cross, * body main div.task-list div.cont .cross {
   width: 2vh;
   height: 2vh;
+  cursor: pointer;
 }
 * body main div.task-list div.cont {
   border-bottom-left-radius: 5px;
