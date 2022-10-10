@@ -24,12 +24,16 @@ const cont = document.querySelector('.cont')
 const crearTask = (val) => {
     let div = document.createElement('div')
     div.classList.add('task')
+    div.setAttribute('id',val.replace(/\s+/g, ''))
 
     let subt = document.createElement('div')
     subt.classList.add('subt')
 
     let checkDiv = document.createElement('div')
     checkDiv.classList.add('check')
+    checkDiv.addEventListener('click', () => {
+        completeTask(div.id)
+    })
 
     let checkImg = document.createElement('img')
     checkImg.setAttribute('src','./images/icon-check.svg')
@@ -40,6 +44,10 @@ const crearTask = (val) => {
     let img = document.createElement('img')
     img.setAttribute('src','./images/icon-cross.svg')
     img.classList.add('cross')
+
+    img.addEventListener('click', () => {
+        deleteTask(div.id)
+    })
     
     checkDiv.appendChild(checkImg)
     subt.appendChild(checkDiv)
@@ -60,8 +68,6 @@ const crearTask = (val) => {
     taskList.insertBefore(div,cont)
 }
 
-/* Active States */
-
 const check = document.querySelectorAll('.check')
 check.forEach(c => {
     c.addEventListener('mouseover', () => {
@@ -70,4 +76,25 @@ check.forEach(c => {
     c.addEventListener('mouseleave', () => {
         c.lastElementChild.style.display = "none"
     })
+    c.addEventListener('click', () => {
+        let parent = c.parentElement
+        completeTask(parent.parentElement.id)
+    })
 })
+
+const cross = document.querySelectorAll('.cross')
+cross.forEach(c => {
+    c.addEventListener('click', () => {
+        deleteTask(c.parentElement.id)
+    })
+})
+
+const deleteTask = (id) => {
+    let task = document.querySelector(`#${id}`)
+    task.remove()
+}
+
+const completeTask = (id) => {
+    let task = document.getElementById(id)
+    task.classList.toggle('complete')
+}
