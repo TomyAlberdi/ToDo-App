@@ -1,6 +1,6 @@
+/* Theme Switch */
 const body = document.querySelector('body')
 const sw = document.querySelectorAll('.switch')
-
 sw.forEach(e => {
     e.addEventListener('click', () => {
         body.classList.toggle('light')
@@ -8,9 +8,9 @@ sw.forEach(e => {
     })
 })
 
+/* New Task Form */
 const form = document.querySelector('form')
 const input = document.querySelector('input')
-
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     if (input.value != '' || input.value != null || input.value != undefined) {
@@ -18,9 +18,9 @@ form.addEventListener('submit', (e) => {
     }
 })
 
+/* New Task Creation */
 const taskList = document.querySelector('.task-list')
 const cont = document.querySelector('.cont')
-
 const crearTask = (val) => {
     let div = document.createElement('div')
     div.classList.add('task')
@@ -68,6 +68,7 @@ const crearTask = (val) => {
     taskList.insertBefore(div,cont)
 }
 
+/* Existing Tasks active states & func */
 const check = document.querySelectorAll('.check')
 check.forEach(c => {
     c.addEventListener('mouseover', () => {
@@ -81,7 +82,6 @@ check.forEach(c => {
         completeTask(parent.parentElement.id)
     })
 })
-
 const cross = document.querySelectorAll('.cross')
 cross.forEach(c => {
     c.addEventListener('click', () => {
@@ -89,12 +89,47 @@ cross.forEach(c => {
     })
 })
 
+/* Utility functions */
 const deleteTask = (id) => {
-    let task = document.querySelector(`#${id}`)
+    let task = document.getElementById(id)
     task.remove()
 }
-
 const completeTask = (id) => {
     let task = document.getElementById(id)
     task.classList.toggle('complete')
+}
+
+/* Filter func */
+const clearCompleted = () => {
+    let tasks = document.querySelectorAll('.task')
+    tasks.forEach(e => {
+        if (e.classList.contains('complete')) { e.remove() }
+    })
+}
+const filtros = document.querySelectorAll('h4')
+const blue = (id) => {
+    filtros.forEach(e => {
+        e.classList.remove('selected')
+    })
+    document.querySelector("#"+id).classList.add('selected')
+}
+const filterAll = () => {
+    let tasks = document.querySelectorAll('.task')
+    tasks.forEach(e => {
+        e.style.display = "flex"
+    })
+}
+const filterActive = () => {
+    filterAll()
+    let tasks = document.querySelectorAll('.task')
+    tasks.forEach(e => {
+        if (e.classList.contains('complete')) { e.style.display = "none" }
+    })
+}
+const filterComplete = () => {
+    filterAll()
+    let tasks = document.querySelectorAll('.task')
+    tasks.forEach(e => {
+        if (!e.classList.contains('complete')) { e.style.display = "none" }
+    })
 }
