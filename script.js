@@ -15,6 +15,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     if (input.value != '' || input.value != null || input.value != undefined) {
         crearTask(input.value)
+        updateLeft()
     }
 })
 
@@ -93,10 +94,12 @@ cross.forEach(c => {
 const deleteTask = (id) => {
     let task = document.getElementById(id)
     task.remove()
+    updateLeft()
 }
 const completeTask = (id) => {
     let task = document.getElementById(id)
     task.classList.toggle('complete')
+    updateLeft()
 }
 
 /* Filter func */
@@ -131,5 +134,19 @@ const filterComplete = () => {
     let tasks = document.querySelectorAll('.task')
     tasks.forEach(e => {
         if (!e.classList.contains('complete')) { e.style.display = "none" }
+    })
+}
+
+const contadores = document.querySelectorAll('.task-left')
+const updateLeft = () => {
+    let cont = 0
+    let tasks = document.querySelectorAll('.task')
+    tasks.forEach(e => {
+        if (!e.classList.contains('complete')) {
+            cont++
+        }
+    })
+    contadores.forEach(e => {
+        e.innerHTML = `${cont} items left`
     })
 }
