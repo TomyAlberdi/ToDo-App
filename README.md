@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/TomyAlberdi/ToDo-App/settings/pages)
+- Solution URL: [GitHub Repository](https://github.com/TomyAlberdi/ToDo-App)
 - Live Site URL: [Live Site](https://tomyalberdi.github.io/ToDo-App/)
 
 ## My process
